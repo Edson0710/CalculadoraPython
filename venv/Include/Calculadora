@@ -1,10 +1,54 @@
 def suma(n1, n2):
     suma = n1 + n2
-    print("Dato: " + str(suma))
+    print("Resultado: " + str(suma))
 
-print("Ingrese dato 1:")
-n1 = float(input())
-print("Ingrese dato 2:")
-n2 = float(input())
-suma(n1, n2)
 
+def resta(n1, n2):
+    resta = n1 - n2
+    print("Resultado: " + str(resta))
+
+
+def multiplicacion(n1, n2):
+    multiplicacion = n1 * n2
+    print("Resultado: " + str(multiplicacion))
+
+
+def division(n1, n2):
+    try:
+        division = n1 / n2
+        print("Resultado: " + str(division))
+    except ZeroDivisionError:
+        print("El segundo dato no puede ser 0")
+
+
+flag = True
+while flag:
+    print("Calculadora:\n\t1.Sumar\n\t2.Restar\n\t3.Multiplicar\n\t4.Dividir\n\t5.Salir ")
+    opcion = float(input("Opcion: "))
+    if opcion == 1:
+        print("Ingrese dato 1:")
+        n1 = float(input())
+        print("Ingrese dato 2:")
+        n2 = float(input())
+        suma(n1, n2)
+    elif opcion == 2:
+        print("Ingrese dato 1:")
+        n1 = float(input())
+        print("Ingrese dato 2:")
+        n2 = float(input())
+        resta(n1, n2)
+    elif opcion == 3:
+        print("Ingrese dato 1:")
+        n1 = float(input())
+        print("Ingrese dato 2:")
+        n2 = float(input())
+        multiplicacion(n1, n2)
+    elif opcion == 4:
+        print("Ingrese dato 1:")
+        n1 = float(input())
+        print("Ingrese dato 2:")
+        n2 = float(input())
+        division(n1, n2)
+    elif opcion == 5:
+        flag = False
+        break
